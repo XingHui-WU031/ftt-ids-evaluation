@@ -1,0 +1,178 @@
+{
+  "val": {
+    "roc_auc": 0.9997804411622445,
+    "avg_precision": 0.9999024839412235,
+    "threshold": 0.5,
+    "accuracy": 0.9967568842502506,
+    "precision": 0.9971759809750297,
+    "recall": 0.9987346483066617,
+    "f1": 0.9979547060354765,
+    "fpr": 0.010783200908059024,
+    "mcc": 0.9901348100036442,
+    "tp": 13418,
+    "tn": 3486,
+    "fp": 38,
+    "fn": 17
+  },
+  "test_ranking": {
+    "roc_auc": 0.9975901051047266,
+    "avg_precision": 0.9950077701922652
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9541821456715074,
+      "precision": 0.8771384136858476,
+      "recall": 0.9957627118644068,
+      "f1": 0.9326938978005622,
+      "fpr": 0.06527846636919517,
+      "mcc": 0.9023267154145511,
+      "tp": 2820,
+      "tn": 5656,
+      "fp": 395,
+      "fn": 12,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9973917579551382
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9927745664739884
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.06527846636919517
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9953917050691244
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.6233333349227905,
+      "accuracy": 0.968366542834628,
+      "precision": 0.9177857844742876,
+      "recall": 0.989406779661017,
+      "f1": 0.9522514868309262,
+      "fpr": 0.04148074698396959,
+      "mcc": 0.9301156928154029,
+      "tp": 2802,
+      "tn": 5800,
+      "fp": 251,
+      "fn": 30,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9953051643192489
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9739884393063584
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.04148074698396959
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9907834101382489
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.7066666483879089,
+      "accuracy": 0.9753461668355285,
+      "precision": 0.9388646288209607,
+      "recall": 0.9869350282485876,
+      "f1": 0.9622998794973318,
+      "fpr": 0.030077673111882332,
+      "mcc": 0.9446507242525412,
+      "tp": 2795,
+      "tn": 5869,
+      "fp": 182,
+      "fn": 37,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9947835159102765
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9667630057803468
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.6666666666666666
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.030077673111882332
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9907834101382489
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.5733333826065063,
+      "accuracy": 0.9646515816728582,
+      "precision": 0.9043031470777135,
+      "recall": 0.9943502824858758,
+      "f1": 0.9471913891691894,
+      "fpr": 0.049248058172202944,
+      "mcc": 0.923058897041446,
+      "tp": 2816,
+      "tn": 5753,
+      "fp": 298,
+      "fn": 16,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9963484611371936
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9898843930635838
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.049248058172202944
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9953917050691244
+        }
+      }
+    }
+  },
+  "model": "rf",
+  "seed": 42,
+  "dataset": "toniot_host3",
+  "overrides": {
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "info": {
+    "train_seconds": 2.0203399658203125,
+    "params": {
+      "n_estimators": 300,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "xgboost": {
+    "max_depth": 10,
+    "min_child_weight": 1,
+    "subsample": 1.0,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 0.1,
+    "learning_rate": 0.03,
+    "gamma": 0.0
+  },
+  "proposed": {
+    "lr": 0.001,
+    "dropout": 0.1,
+    "d_model": 32,
+    "num_layers": 3,
+    "dim_ff": 256,
+    "weight_decay": 0.0
+  }
+}

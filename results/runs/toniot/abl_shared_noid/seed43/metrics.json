@@ -1,0 +1,264 @@
+{
+  "val": {
+    "roc_auc": 0.9898462424993665,
+    "avg_precision": 0.9957361131372311,
+    "threshold": 0.5,
+    "accuracy": 0.9728315986122231,
+    "precision": 0.9826846021751574,
+    "recall": 0.9809299335761731,
+    "f1": 0.9818064838974871,
+    "fpr": 0.05111956062526405,
+    "mcc": 0.9281939707808505,
+    "tp": 13734,
+    "tn": 4492,
+    "fp": 242,
+    "fn": 267
+  },
+  "test_ranking": {
+    "roc_auc": 0.9902928264212837,
+    "avg_precision": 0.9962507689573862
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9733134073441503,
+      "precision": 0.9822130152153725,
+      "recall": 0.9820727090922077,
+      "f1": 0.9821428571428571,
+      "fpr": 0.05258711721224921,
+      "mcc": 0.9293557331506296,
+      "tp": 13750,
+      "tn": 4486,
+      "fp": 249,
+      "fn": 251,
+      "per_group": {
+        "backdoor": {
+          "n": 393,
+          "detection_rate": 0.989821882951654
+        },
+        "ddos": {
+          "n": 2393,
+          "detection_rate": 0.9916422900125366
+        },
+        "dos": {
+          "n": 1289,
+          "detection_rate": 0.8673390224980605
+        },
+        "injection": {
+          "n": 3970,
+          "detection_rate": 0.9979848866498741
+        },
+        "mitm": {
+          "n": 208,
+          "detection_rate": 0.9278846153846154
+        },
+        "normal": {
+          "n": 4735,
+          "false_positive_rate": 0.05258711721224921
+        },
+        "password": {
+          "n": 3050,
+          "detection_rate": 0.9963934426229508
+        },
+        "ransomware": {
+          "n": 52,
+          "detection_rate": 0.9423076923076923
+        },
+        "scanning": {
+          "n": 898,
+          "detection_rate": 0.9977728285077951
+        },
+        "xss": {
+          "n": 1748,
+          "detection_rate": 0.9902745995423341
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.6901482343673706,
+      "accuracy": 0.976195559350982,
+      "precision": 0.9886797894585045,
+      "recall": 0.9793586172416257,
+      "f1": 0.9839971295299605,
+      "fpr": 0.03315733896515311,
+      "mcc": 0.9377127102371176,
+      "tp": 13712,
+      "tn": 4578,
+      "fp": 157,
+      "fn": 289,
+      "per_group": {
+        "backdoor": {
+          "n": 393,
+          "detection_rate": 0.9770992366412213
+        },
+        "ddos": {
+          "n": 2393,
+          "detection_rate": 0.9916422900125366
+        },
+        "dos": {
+          "n": 1289,
+          "detection_rate": 0.8657874321179209
+        },
+        "injection": {
+          "n": 3970,
+          "detection_rate": 0.9962216624685138
+        },
+        "mitm": {
+          "n": 208,
+          "detection_rate": 0.8942307692307693
+        },
+        "normal": {
+          "n": 4735,
+          "false_positive_rate": 0.03315733896515311
+        },
+        "password": {
+          "n": 3050,
+          "detection_rate": 0.9957377049180328
+        },
+        "ransomware": {
+          "n": 52,
+          "detection_rate": 0.9423076923076923
+        },
+        "scanning": {
+          "n": 898,
+          "detection_rate": 0.9966592427616926
+        },
+        "xss": {
+          "n": 1748,
+          "detection_rate": 0.9822654462242563
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.6901482343673706,
+      "accuracy": 0.976195559350982,
+      "precision": 0.9886797894585045,
+      "recall": 0.9793586172416257,
+      "f1": 0.9839971295299605,
+      "fpr": 0.03315733896515311,
+      "mcc": 0.9377127102371176,
+      "tp": 13712,
+      "tn": 4578,
+      "fp": 157,
+      "fn": 289,
+      "per_group": {
+        "backdoor": {
+          "n": 393,
+          "detection_rate": 0.9770992366412213
+        },
+        "ddos": {
+          "n": 2393,
+          "detection_rate": 0.9916422900125366
+        },
+        "dos": {
+          "n": 1289,
+          "detection_rate": 0.8657874321179209
+        },
+        "injection": {
+          "n": 3970,
+          "detection_rate": 0.9962216624685138
+        },
+        "mitm": {
+          "n": 208,
+          "detection_rate": 0.8942307692307693
+        },
+        "normal": {
+          "n": 4735,
+          "false_positive_rate": 0.03315733896515311
+        },
+        "password": {
+          "n": 3050,
+          "detection_rate": 0.9957377049180328
+        },
+        "ransomware": {
+          "n": 52,
+          "detection_rate": 0.9423076923076923
+        },
+        "scanning": {
+          "n": 898,
+          "detection_rate": 0.9966592427616926
+        },
+        "xss": {
+          "n": 1748,
+          "detection_rate": 0.9822654462242563
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.9761762619018555,
+      "accuracy": 0.8523697694278395,
+      "precision": 0.9966404385111838,
+      "recall": 0.805156774516106,
+      "f1": 0.8907237673830596,
+      "fpr": 0.008025343189017951,
+      "mcc": 0.7082241359358176,
+      "tp": 11273,
+      "tn": 4697,
+      "fp": 38,
+      "fn": 2728,
+      "per_group": {
+        "backdoor": {
+          "n": 393,
+          "detection_rate": 0.9745547073791349
+        },
+        "ddos": {
+          "n": 2393,
+          "detection_rate": 0.7312996239030506
+        },
+        "dos": {
+          "n": 1289,
+          "detection_rate": 0.7230411171450737
+        },
+        "injection": {
+          "n": 3970,
+          "detection_rate": 0.7584382871536524
+        },
+        "mitm": {
+          "n": 208,
+          "detection_rate": 0.6394230769230769
+        },
+        "normal": {
+          "n": 4735,
+          "false_positive_rate": 0.008025343189017951
+        },
+        "password": {
+          "n": 3050,
+          "detection_rate": 0.9468852459016394
+        },
+        "ransomware": {
+          "n": 52,
+          "detection_rate": 0.9038461538461539
+        },
+        "scanning": {
+          "n": 898,
+          "detection_rate": 0.9855233853006682
+        },
+        "xss": {
+          "n": 1748,
+          "detection_rate": 0.7116704805491991
+        }
+      }
+    }
+  },
+  "model": "abl_shared_noid",
+  "seed": 43,
+  "dataset": "toniot",
+  "overrides": {
+    "lr": 0.001
+  },
+  "info": {
+    "best_epoch": 19,
+    "best_val_loss": 0.10139011925686382,
+    "epochs_run": 29,
+    "train_seconds": 92.2452290058136,
+    "n_params": 562562,
+    "train_cfg": {
+      "optimizer": "adam",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "batch_size": 256,
+      "max_epochs": 60,
+      "patience": 10
+    }
+  }
+}

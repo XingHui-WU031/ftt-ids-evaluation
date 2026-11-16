@@ -1,0 +1,168 @@
+{
+  "val": {
+    "roc_auc": 0.9997321176264616,
+    "avg_precision": 0.9999117005847081,
+    "threshold": 0.5,
+    "accuracy": 0.9950841368878806,
+    "precision": 0.997498332221481,
+    "recall": 0.9960033305578685,
+    "f1": 0.996750270810766,
+    "fpr": 0.0077780658542909,
+    "mcc": 0.9866670215489945,
+    "tp": 11962,
+    "tn": 3827,
+    "fp": 30,
+    "fn": 48
+  },
+  "test_ranking": {
+    "roc_auc": 0.993478936563067,
+    "avg_precision": 0.9964344848709215
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9715520847859433,
+      "precision": 0.9844701583434835,
+      "recall": 0.9743821579264618,
+      "f1": 0.9794001817631022,
+      "fpr": 0.03486782133090246,
+      "mcc": 0.933577050524554,
+      "tp": 9699,
+      "tn": 4235,
+      "fp": 153,
+      "fn": 255,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.03486782133090246
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9965616045845272
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.969785575048733
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.4712901711463928,
+      "accuracy": 0.971482359503556,
+      "precision": 0.9835849630155031,
+      "recall": 0.9751858549326904,
+      "f1": 0.9793674015033043,
+      "fpr": 0.03691886964448496,
+      "mcc": 0.9333027364789759,
+      "tp": 9707,
+      "tn": 4226,
+      "fp": 162,
+      "fn": 247,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.03691886964448496
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.997134670487106
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9706384015594542
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.4712901711463928,
+      "accuracy": 0.971482359503556,
+      "precision": 0.9835849630155031,
+      "recall": 0.9751858549326904,
+      "f1": 0.9793674015033043,
+      "fpr": 0.03691886964448496,
+      "mcc": 0.9333027364789759,
+      "tp": 9707,
+      "tn": 4226,
+      "fp": 162,
+      "fn": 247,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.03691886964448496
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.997134670487106
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9706384015594542
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.3978594243526459,
+      "accuracy": 0.9716218100683308,
+      "precision": 0.9807634202840165,
+      "recall": 0.9783001808318263,
+      "f1": 0.9795302519740481,
+      "fpr": 0.0435278030993619,
+      "mcc": 0.9332935817729698,
+      "tp": 9738,
+      "tn": 4197,
+      "fp": 191,
+      "fn": 216,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.0435278030993619
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.997134670487106
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9742933723196882
+        }
+      }
+    }
+  },
+  "model": "ft_transformer",
+  "seed": 42,
+  "dataset": "toniot_host2",
+  "overrides": {
+    "lr": 0.0001
+  },
+  "info": {
+    "best_epoch": 27,
+    "best_val_loss": 0.015570736911095945,
+    "epochs_run": 37,
+    "train_seconds": 197.11930775642395,
+    "n_params": 922370,
+    "train_cfg": {
+      "optimizer": "adamw",
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "batch_size": 256,
+      "max_epochs": 60,
+      "patience": 10
+    }
+  }
+}

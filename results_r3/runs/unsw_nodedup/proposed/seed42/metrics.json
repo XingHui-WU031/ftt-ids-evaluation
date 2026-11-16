@@ -1,0 +1,264 @@
+{
+  "val": {
+    "roc_auc": 0.9920553463697683,
+    "avg_precision": 0.9962499743603163,
+    "threshold": 0.5,
+    "accuracy": 0.951039379508968,
+    "precision": 0.9577237788246963,
+    "recall": 0.9709246302735766,
+    "f1": 0.9642790271912123,
+    "fpr": 0.09133928571428572,
+    "mcc": 0.8867059529637301,
+    "tp": 23175,
+    "tn": 10177,
+    "fp": 1023,
+    "fn": 694
+  },
+  "test_ranking": {
+    "roc_auc": 0.9837333057490563,
+    "avg_precision": 0.9879360081486463
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.8772287810328913,
+      "precision": 0.8254730928444707,
+      "recall": 0.985352510367952,
+      "f1": 0.8983548529825832,
+      "fpr": 0.25524324324324327,
+      "mcc": 0.7651839734785605,
+      "tp": 44668,
+      "tn": 27556,
+      "fp": 9444,
+      "fn": 664,
+      "per_group": {
+        "Analysis": {
+          "n": 677,
+          "detection_rate": 0.9955686853766618
+        },
+        "Backdoor": {
+          "n": 583,
+          "detection_rate": 0.9982847341337907
+        },
+        "DoS": {
+          "n": 4089,
+          "detection_rate": 0.9975544142822206
+        },
+        "Exploits": {
+          "n": 11132,
+          "detection_rate": 0.9939813151275602
+        },
+        "Fuzzers": {
+          "n": 6062,
+          "detection_rate": 0.9054767403497196
+        },
+        "Generic": {
+          "n": 18871,
+          "detection_rate": 0.9998940172751841
+        },
+        "Normal": {
+          "n": 37000,
+          "false_positive_rate": 0.25524324324324327
+        },
+        "Reconnaissance": {
+          "n": 3496,
+          "detection_rate": 0.9985697940503433
+        },
+        "Shellcode": {
+          "n": 378,
+          "detection_rate": 0.9920634920634921
+        },
+        "Worms": {
+          "n": 44,
+          "detection_rate": 1.0
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.464890718460083,
+      "accuracy": 0.8688237866200262,
+      "precision": 0.8137675365268591,
+      "recall": 0.9878231712697433,
+      "f1": 0.8923874053407733,
+      "fpr": 0.27697297297297296,
+      "mcc": 0.7510630370273778,
+      "tp": 44780,
+      "tn": 26752,
+      "fp": 10248,
+      "fn": 552,
+      "per_group": {
+        "Analysis": {
+          "n": 677,
+          "detection_rate": 0.9970457902511078
+        },
+        "Backdoor": {
+          "n": 583,
+          "detection_rate": 0.9982847341337907
+        },
+        "DoS": {
+          "n": 4089,
+          "detection_rate": 0.9980435314257765
+        },
+        "Exploits": {
+          "n": 11132,
+          "detection_rate": 0.9944304707150557
+        },
+        "Fuzzers": {
+          "n": 6062,
+          "detection_rate": 0.9223028703398218
+        },
+        "Generic": {
+          "n": 18871,
+          "detection_rate": 0.9999470086375921
+        },
+        "Normal": {
+          "n": 37000,
+          "false_positive_rate": 0.27697297297297296
+        },
+        "Reconnaissance": {
+          "n": 3496,
+          "detection_rate": 0.9988558352402745
+        },
+        "Shellcode": {
+          "n": 378,
+          "detection_rate": 0.9920634920634921
+        },
+        "Worms": {
+          "n": 44,
+          "detection_rate": 1.0
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.7081775665283203,
+      "accuracy": 0.9082130884710684,
+      "precision": 0.881943742290348,
+      "recall": 0.9620797670519721,
+      "f1": 0.9202705126446725,
+      "fpr": 0.15778378378378377,
+      "mcc": 0.8168816758352229,
+      "tp": 43613,
+      "tn": 31162,
+      "fp": 5838,
+      "fn": 1719,
+      "per_group": {
+        "Analysis": {
+          "n": 677,
+          "detection_rate": 0.9852289512555391
+        },
+        "Backdoor": {
+          "n": 583,
+          "detection_rate": 0.9982847341337907
+        },
+        "DoS": {
+          "n": 4089,
+          "detection_rate": 0.9926632428466617
+        },
+        "Exploits": {
+          "n": 11132,
+          "detection_rate": 0.983201581027668
+        },
+        "Fuzzers": {
+          "n": 6062,
+          "detection_rate": 0.7619597492576707
+        },
+        "Generic": {
+          "n": 18871,
+          "detection_rate": 0.9995230777383286
+        },
+        "Normal": {
+          "n": 37000,
+          "false_positive_rate": 0.15778378378378377
+        },
+        "Reconnaissance": {
+          "n": 3496,
+          "detection_rate": 0.9917048054919908
+        },
+        "Shellcode": {
+          "n": 378,
+          "detection_rate": 0.9761904761904762
+        },
+        "Worms": {
+          "n": 44,
+          "detection_rate": 0.9772727272727273
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.9010887742042542,
+      "accuracy": 0.9276830394014478,
+      "precision": 0.9569273613367371,
+      "recall": 0.9096002823612459,
+      "f1": 0.932663816697202,
+      "fpr": 0.05016216216216216,
+      "mcc": 0.855961243782098,
+      "tp": 41234,
+      "tn": 35144,
+      "fp": 1856,
+      "fn": 4098,
+      "per_group": {
+        "Analysis": {
+          "n": 677,
+          "detection_rate": 0.9276218611521418
+        },
+        "Backdoor": {
+          "n": 583,
+          "detection_rate": 0.9862778730703259
+        },
+        "DoS": {
+          "n": 4089,
+          "detection_rate": 0.9684519442406456
+        },
+        "Exploits": {
+          "n": 11132,
+          "detection_rate": 0.9468199784405318
+        },
+        "Fuzzers": {
+          "n": 6062,
+          "detection_rate": 0.48515341471461565
+        },
+        "Generic": {
+          "n": 18871,
+          "detection_rate": 0.9966615441683006
+        },
+        "Normal": {
+          "n": 37000,
+          "false_positive_rate": 0.05016216216216216
+        },
+        "Reconnaissance": {
+          "n": 3496,
+          "detection_rate": 0.9736842105263158
+        },
+        "Shellcode": {
+          "n": 378,
+          "detection_rate": 0.8941798941798942
+        },
+        "Worms": {
+          "n": 44,
+          "detection_rate": 0.9090909090909091
+        }
+      }
+    }
+  },
+  "model": "proposed",
+  "seed": 42,
+  "dataset": "unsw_nodedup",
+  "overrides": {
+    "lr": 0.0005
+  },
+  "info": {
+    "best_epoch": 58,
+    "best_val_loss": 0.09999620699284914,
+    "epochs_run": 60,
+    "train_seconds": 584.6388745307922,
+    "n_params": 577410,
+    "train_cfg": {
+      "optimizer": "adam",
+      "lr": 0.0005,
+      "weight_decay": 0.0,
+      "batch_size": 256,
+      "max_epochs": 60,
+      "patience": 10
+    }
+  }
+}

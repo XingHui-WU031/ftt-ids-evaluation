@@ -1,0 +1,2 @@
+Comparison,seeds,McNemar p (median),seeds with p<0.05,ΔF1 [95% CI] (pp),ΔAUC [95% CI]
+Proposed (per-feature + categorical emb.) vs XGBoost,5,4.64e-16,4/5,"-0.56 [-0.65, -0.47]","-0.0007 [-0.0010, -0.0003]"

@@ -1,0 +1,12 @@
+# Versions used for the reported results (Python 3.13, Windows, NVIDIA RTX 5060 Laptop GPU).
+# Install PyTorch first with the CUDA build that matches your driver, e.g.
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.9.0
+scipy==1.18.0
+xgboost==3.4.1
+lightgbm==4.7.0
+shap==0.52.0
+matplotlib==3.11.1

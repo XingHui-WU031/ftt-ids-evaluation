@@ -1,0 +1,178 @@
+{
+  "val": {
+    "roc_auc": 0.9997811276136372,
+    "avg_precision": 0.9999026553389168,
+    "threshold": 0.5,
+    "accuracy": 0.996462055545728,
+    "precision": 0.9968794115461773,
+    "recall": 0.9986602158541124,
+    "f1": 0.9977690191120696,
+    "fpr": 0.01191827468785471,
+    "mcc": 0.9892360955896565,
+    "tp": 13417,
+    "tn": 3482,
+    "fp": 42,
+    "fn": 18
+  },
+  "test_ranking": {
+    "roc_auc": 0.9972522868237683,
+    "avg_precision": 0.9935799193378285
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9519306540583137,
+      "precision": 0.8717156105100463,
+      "recall": 0.9957627118644068,
+      "f1": 0.9296192516894676,
+      "fpr": 0.06858370517269873,
+      "mcc": 0.8979234303671548,
+      "tp": 2820,
+      "tn": 5636,
+      "fp": 415,
+      "fn": 12,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9973917579551382
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9927745664739884
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.06858370517269873
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9953917050691244
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.6700000166893005,
+      "accuracy": 0.970843183609141,
+      "precision": 0.9255706252067483,
+      "recall": 0.9879943502824858,
+      "f1": 0.9557643040136635,
+      "fpr": 0.03718393653941497,
+      "mcc": 0.9351607036491157,
+      "tp": 2798,
+      "tn": 5826,
+      "fp": 225,
+      "fn": 34,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9953051643192489
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9682080924855492
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.03718393653941497
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9907834101382489
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.6700000166893005,
+      "accuracy": 0.970843183609141,
+      "precision": 0.9255706252067483,
+      "recall": 0.9879943502824858,
+      "f1": 0.9557643040136635,
+      "fpr": 0.03718393653941497,
+      "mcc": 0.9351607036491157,
+      "tp": 2798,
+      "tn": 5826,
+      "fp": 225,
+      "fn": 34,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9953051643192489
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9682080924855492
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.03718393653941497
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9907834101382489
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.5600000619888306,
+      "accuracy": 0.9612743442530677,
+      "precision": 0.8951715374841169,
+      "recall": 0.9950564971751412,
+      "f1": 0.9424749163879599,
+      "fpr": 0.05453644025780863,
+      "mcc": 0.9163137203324037,
+      "tp": 2818,
+      "tn": 5721,
+      "fp": 330,
+      "fn": 14,
+      "per_group": {
+        "backdoor": {
+          "n": 1917,
+          "detection_rate": 0.9973917579551382
+        },
+        "dos": {
+          "n": 692,
+          "detection_rate": 0.9913294797687862
+        },
+        "mitm": {
+          "n": 6,
+          "detection_rate": 0.8333333333333334
+        },
+        "normal": {
+          "n": 6051,
+          "false_positive_rate": 0.05453644025780863
+        },
+        "ransomware": {
+          "n": 217,
+          "detection_rate": 0.9907834101382489
+        }
+      }
+    }
+  },
+  "model": "rf",
+  "seed": 43,
+  "dataset": "toniot_host3",
+  "overrides": {
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "info": {
+    "train_seconds": 1.7576563358306885,
+    "params": {
+      "n_estimators": 300,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "val": {
+    "roc_auc": 0.9986031863085316,
+    "avg_precision": 0.9994740931600521,
+    "threshold": 0.5,
+    "accuracy": 0.9923741097876095,
+    "precision": 0.9938522887762732,
+    "recall": 0.9960865945045795,
+    "f1": 0.9949681872998711,
+    "fpr": 0.019185895773917553,
+    "mcc": 0.9792379276156483,
+    "tp": 11963,
+    "tn": 3783,
+    "fp": 74,
+    "fn": 47
+  },
+  "test_ranking": {
+    "roc_auc": 0.995451822229109,
+    "avg_precision": 0.9975755656452625
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9821503277088273,
+      "precision": 0.9873366834170855,
+      "recall": 0.9869399236487844,
+      "f1": 0.987138263665595,
+      "fpr": 0.02871467639015497,
+      "mcc": 0.9579812985838858,
+      "tp": 9824,
+      "tn": 4262,
+      "fp": 126,
+      "fn": 130,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.02871467639015497
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9982808022922636
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9845272904483431
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.39017438888549805,
+      "accuracy": 0.9818017012968903,
+      "precision": 0.9845046486054184,
+      "recall": 0.9893510146674703,
+      "f1": 0.9869218820463999,
+      "fpr": 0.035323609845031904,
+      "mcc": 0.9570464537416262,
+      "tp": 9848,
+      "tn": 4233,
+      "fp": 155,
+      "fn": 106,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.035323609845031904
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9982808022922636
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9874512670565302
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.7952021956443787,
+      "accuracy": 0.9778273602008088,
+      "precision": 0.9928396072013094,
+      "recall": 0.9750853928069118,
+      "f1": 0.9838824125696909,
+      "fpr": 0.015952597994530537,
+      "mcc": 0.948773002641833,
+      "tp": 9706,
+      "tn": 4318,
+      "fp": 70,
+      "fn": 248,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.015952597994530537
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.997134670487106
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9703947368421053
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.9172683358192444,
+      "accuracy": 0.9487519174452657,
+      "precision": 0.9941044056168935,
+      "recall": 0.9316857544705646,
+      "f1": 0.9618835243478712,
+      "fpr": 0.01253418413855971,
+      "mcc": 0.8882860919135481,
+      "tp": 9274,
+      "tn": 4333,
+      "fp": 55,
+      "fn": 680,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.01253418413855971
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9965616045845272
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9178849902534113
+        }
+      }
+    }
+  },
+  "model": "proposed",
+  "seed": 44,
+  "dataset": "toniot_host2",
+  "overrides": {
+    "lr": 0.001
+  },
+  "info": {
+    "best_epoch": 45,
+    "best_val_loss": 0.025848867582630223,
+    "epochs_run": 55,
+    "train_seconds": 264.1582078933716,
+    "n_params": 571330,
+    "train_cfg": {
+      "optimizer": "adam",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "batch_size": 256,
+      "max_epochs": 60,
+      "patience": 10
+    }
+  }
+}

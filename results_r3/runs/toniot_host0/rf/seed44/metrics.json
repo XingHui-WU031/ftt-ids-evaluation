@@ -1,0 +1,210 @@
+{
+  "val": {
+    "roc_auc": 0.9994018297775887,
+    "avg_precision": 0.9995207091925814,
+    "threshold": 0.5,
+    "accuracy": 0.9960418682381915,
+    "precision": 0.9957531519575316,
+    "recall": 0.9982703565726451,
+    "f1": 0.9970101654375126,
+    "fpr": 0.008305216714248637,
+    "mcc": 0.9911630637948191,
+    "tp": 7503,
+    "tn": 3821,
+    "fp": 32,
+    "fn": 13
+  },
+  "test_ranking": {
+    "roc_auc": 0.9992849409706681,
+    "avg_precision": 0.9998319161690622
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9978552424390509,
+      "precision": 0.9992592135316994,
+      "recall": 0.9983039871719757,
+      "f1": 0.9987813719592145,
+      "fpr": 0.005448354143019296,
+      "mcc": 0.9898536061434586,
+      "tp": 32374,
+      "tn": 4381,
+      "fp": 24,
+      "fn": 55,
+      "per_group": {
+        "ddos": {
+          "n": 9879,
+          "detection_rate": 0.9977730539528292
+        },
+        "dos": {
+          "n": 5242,
+          "detection_rate": 0.997138496756963
+        },
+        "injection": {
+          "n": 7787,
+          "detection_rate": 0.9980737125979197
+        },
+        "mitm": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4405,
+          "false_positive_rate": 0.005448354143019296
+        },
+        "password": {
+          "n": 7368,
+          "detection_rate": 0.999728555917481
+        },
+        "scanning": {
+          "n": 2152,
+          "detection_rate": 1.0
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.5333333611488342,
+      "accuracy": 0.9970407775424879,
+      "precision": 0.999289377742075,
+      "recall": 0.9973480526689075,
+      "f1": 0.998317771432981,
+      "fpr": 0.005221339387060159,
+      "mcc": 0.9860655379794809,
+      "tp": 32343,
+      "tn": 4382,
+      "fp": 23,
+      "fn": 86,
+      "per_group": {
+        "ddos": {
+          "n": 9879,
+          "detection_rate": 0.9975706043121774
+        },
+        "dos": {
+          "n": 5242,
+          "detection_rate": 0.9919877909194964
+        },
+        "injection": {
+          "n": 7787,
+          "detection_rate": 0.9980737125979197
+        },
+        "mitm": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4405,
+          "false_positive_rate": 0.005221339387060159
+        },
+        "password": {
+          "n": 7368,
+          "detection_rate": 0.9995928338762216
+        },
+        "scanning": {
+          "n": 2152,
+          "detection_rate": 0.9995353159851301
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.6433333158493042,
+      "accuracy": 0.9937286202964652,
+      "precision": 0.9993796141199827,
+      "recall": 0.9934934780597613,
+      "f1": 0.9964278534646729,
+      "fpr": 0.004540295119182747,
+      "mcc": 0.9710495958181762,
+      "tp": 32218,
+      "tn": 4385,
+      "fp": 20,
+      "fn": 211,
+      "per_group": {
+        "ddos": {
+          "n": 9879,
+          "detection_rate": 0.9957485575463103
+        },
+        "dos": {
+          "n": 5242,
+          "detection_rate": 0.972911102632583
+        },
+        "injection": {
+          "n": 7787,
+          "detection_rate": 0.9974316167972261
+        },
+        "mitm": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4405,
+          "false_positive_rate": 0.004540295119182747
+        },
+        "password": {
+          "n": 7368,
+          "detection_rate": 0.999457111834962
+        },
+        "scanning": {
+          "n": 2152,
+          "detection_rate": 0.9990706319702602
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.41333335638046265,
+      "accuracy": 0.9982353260574469,
+      "precision": 0.999228728327266,
+      "recall": 0.9987665361250733,
+      "f1": 0.9989975787671761,
+      "fpr": 0.0056753688989784334,
+      "mcc": 0.9916339918327903,
+      "tp": 32389,
+      "tn": 4380,
+      "fp": 25,
+      "fn": 40,
+      "per_group": {
+        "ddos": {
+          "n": 9879,
+          "detection_rate": 0.9983804028747849
+        },
+        "dos": {
+          "n": 5242,
+          "detection_rate": 0.9982830980541778
+        },
+        "injection": {
+          "n": 7787,
+          "detection_rate": 0.9982021317580583
+        },
+        "mitm": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4405,
+          "false_positive_rate": 0.0056753688989784334
+        },
+        "password": {
+          "n": 7368,
+          "detection_rate": 0.9998642779587406
+        },
+        "scanning": {
+          "n": 2152,
+          "detection_rate": 1.0
+        }
+      }
+    }
+  },
+  "model": "rf",
+  "seed": 44,
+  "dataset": "toniot_host0",
+  "overrides": {
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "info": {
+    "train_seconds": 1.356363296508789,
+    "params": {
+      "n_estimators": 300,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1
+    }
+  }
+}

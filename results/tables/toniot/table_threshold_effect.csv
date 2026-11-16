@@ -1,0 +1,34 @@
+Model,Rule,ΔF1 (pp),ΔFPR (pp),ΔRecall (pp),FP removed (mean)
+Random Forest,val_f1,+0.00,+0.01,+0.01,-0
+Random Forest,val_youden,-0.03,-0.44,-0.21,21
+Random Forest,val_fpr01,-0.00,-0.03,-0.01,1
+XGBoost,val_f1,-0.00,+0.08,+0.02,-4
+XGBoost,val_youden,-0.02,-0.17,-0.11,8
+XGBoost,val_fpr01,-0.01,+0.21,+0.05,-10
+MLP,val_f1,+0.01,-0.12,-0.02,6
+MLP,val_youden,+0.01,-0.26,-0.07,12
+MLP,val_fpr01,+0.00,-0.25,-0.08,12
+1D-CNN,val_f1,+0.02,+0.19,+0.11,-9
+1D-CNN,val_youden,-0.05,-0.36,-0.23,17
+1D-CNN,val_fpr01,-0.03,-0.28,-0.16,13
+FT-Transformer,val_f1,+0.01,-0.00,+0.01,0
+FT-Transformer,val_youden,-0.08,-0.30,-0.26,14
+FT-Transformer,val_fpr01,-0.02,-0.14,-0.08,7
+Single-token Transformer (thesis Exp01),val_f1,+0.01,-0.14,-0.02,7
+Single-token Transformer (thesis Exp01),val_youden,-0.00,-0.40,-0.13,19
+Single-token Transformer (thesis Exp01),val_fpr01,-0.00,-0.42,-0.15,20
+"Feature-token Transformer, shared emb. (thesis)",val_f1,+0.01,-0.09,-0.01,4
+"Feature-token Transformer, shared emb. (thesis)",val_youden,-0.04,-0.41,-0.22,19
+"Feature-token Transformer, shared emb. (thesis)",val_fpr01,-0.30,-0.71,-0.83,33
+  - w/o identity embedding,val_f1,+0.32,-0.83,+0.36,39
+  - w/o identity embedding,val_youden,+0.32,-0.84,+0.35,40
+  - w/o identity embedding,val_fpr01,-8.00,-3.84,-15.47,182
+"  per-feature emb., ordinal categoricals",val_f1,-0.02,-0.00,-0.04,0
+"  per-feature emb., ordinal categoricals",val_youden,-0.12,-0.44,-0.39,21
+"  per-feature emb., ordinal categoricals",val_fpr01,-0.17,-0.49,-0.49,23
+  shared emb. + categorical emb.,val_f1,+0.04,+0.44,+0.22,-21
+  shared emb. + categorical emb.,val_youden,-0.03,-0.48,-0.23,23
+  shared emb. + categorical emb.,val_fpr01,-0.57,-1.04,-1.46,49
+Proposed (per-feature + categorical emb.),val_f1,-0.00,-0.02,-0.01,1
+Proposed (per-feature + categorical emb.),val_youden,-0.06,-0.49,-0.27,23
+Proposed (per-feature + categorical emb.),val_fpr01,-0.11,-0.52,-0.39,25

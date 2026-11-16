@@ -1,0 +1,7 @@
+Model,Rule,ΔF1 (pp),ΔFPR (pp),ΔRecall (pp),FP removed (mean)
+XGBoost,val_f1,-0.07,+0.25,+0.03,-94
+XGBoost,val_youden,+0.19,-0.80,-0.16,298
+XGBoost,val_fpr01,+3.92,-20.59,-6.61,7618
+Proposed (per-feature + categorical emb.),val_f1,-1.09,+4.25,+0.61,-1571
+Proposed (per-feature + categorical emb.),val_youden,+0.15,-0.60,-0.10,221
+Proposed (per-feature + categorical emb.),val_fpr01,+3.40,-20.13,-7.38,7448

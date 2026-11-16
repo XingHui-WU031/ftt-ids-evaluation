@@ -1,0 +1,93 @@
+{
+  "model": "proposed",
+  "features": [
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "missed_bytes",
+    "src_pkts",
+    "src_ip_bytes",
+    "dst_pkts",
+    "dst_ip_bytes",
+    "dns_qclass",
+    "dns_qtype",
+    "dns_rcode",
+    "http_request_body_len",
+    "http_response_body_len",
+    "http_status_code",
+    "proto",
+    "service",
+    "conn_state",
+    "dns_AA",
+    "dns_RD",
+    "dns_RA",
+    "dns_rejected",
+    "ssl_version",
+    "ssl_cipher",
+    "ssl_resumed",
+    "ssl_established",
+    "http_trans_depth",
+    "http_method",
+    "http_version",
+    "http_orig_mime_types",
+    "http_resp_mime_types",
+    "weird_name",
+    "weird_addl",
+    "weird_notice"
+  ],
+  "seeds": {
+    "42": {
+      "base_value": 4.227522850036621,
+      "additivity_mae": 1.4300954416443876,
+      "additivity_rel": 0.1790437093816951
+    },
+    "43": {
+      "base_value": 3.4070842266082764,
+      "additivity_mae": 0.9483140755704573,
+      "additivity_rel": 0.13081145698824684
+    },
+    "44": {
+      "base_value": 6.412768840789795,
+      "additivity_mae": 1.757561676662583,
+      "additivity_rel": 0.15452051622752674
+    },
+    "45": {
+      "base_value": 4.517491340637207,
+      "additivity_mae": 1.6798358995363236,
+      "additivity_rel": 0.18996892960940356
+    },
+    "46": {
+      "base_value": 4.329289436340332,
+      "additivity_mae": 1.1204529643827308,
+      "additivity_rel": 0.13339556304697323
+    }
+  },
+  "stability": {
+    "across_backgrounds": {
+      "spearman_mean": 0.99,
+      "spearman_std": 0.0019,
+      "kendall_mean": 0.9412,
+      "kendall_std": 0.0081,
+      "top10_jaccard_mean": 0.8182,
+      "top10_jaccard_std": 0.0
+    },
+    "across_seeds": {
+      "spearman_mean": 0.9489,
+      "spearman_std": 0.0152,
+      "kendall_mean": 0.8285,
+      "kendall_std": 0.0265,
+      "top10_jaccard_mean": 0.7273,
+      "top10_jaccard_std": 0.0782
+    }
+  },
+  "shap_vs_permutation": {
+    "spearman": 0.8605331357862809,
+    "top10_overlap": 8
+  },
+  "outcome_counts_seed_first": {
+    "TP": 13942,
+    "TN": 4654,
+    "FP": 81,
+    "FN": 59
+  }
+}

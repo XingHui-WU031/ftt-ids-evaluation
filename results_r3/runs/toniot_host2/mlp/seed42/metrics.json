@@ -1,0 +1,169 @@
+{
+  "val": {
+    "roc_auc": 0.999528534362407,
+    "avg_precision": 0.9998133808400038,
+    "threshold": 0.5,
+    "accuracy": 0.9947690174576165,
+    "precision": 0.9966686099775132,
+    "recall": 0.9964196502914238,
+    "f1": 0.9965441145855021,
+    "fpr": 0.010370754472387866,
+    "mcc": 0.9857887704004489,
+    "tp": 11967,
+    "tn": 3817,
+    "fp": 40,
+    "fn": 43
+  },
+  "test_ranking": {
+    "roc_auc": 0.9945257070399866,
+    "avg_precision": 0.996755690325396
+  },
+  "test": {
+    "default": {
+      "threshold": 0.5,
+      "accuracy": 0.9758750522939618,
+      "precision": 0.9792498004788508,
+      "recall": 0.9861362266425557,
+      "f1": 0.9826809490439483,
+      "fpr": 0.04740200546946217,
+      "mcc": 0.9430026861841406,
+      "tp": 9816,
+      "tn": 4180,
+      "fp": 208,
+      "fn": 138,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.04740200546946217
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9977077363896848
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9836744639376218
+        }
+      }
+    },
+    "val_f1": {
+      "threshold": 0.37458160519599915,
+      "accuracy": 0.974689722493376,
+      "precision": 0.9754138990780212,
+      "recall": 0.9884468555354631,
+      "f1": 0.9818871313806696,
+      "fpr": 0.056517775752051046,
+      "mcc": 0.9401219628054392,
+      "tp": 9839,
+      "tn": 4140,
+      "fp": 248,
+      "fn": 115,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.056517775752051046
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9977077363896848
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9864766081871345
+        }
+      }
+    },
+    "val_youden": {
+      "threshold": 0.6466745734214783,
+      "accuracy": 0.9760145028587366,
+      "precision": 0.986336032388664,
+      "recall": 0.9790034157122764,
+      "f1": 0.982656045174952,
+      "fpr": 0.030765724703737465,
+      "mcc": 0.9438567505003258,
+      "tp": 9745,
+      "tn": 4253,
+      "fp": 135,
+      "fn": 209,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 0.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.030765724703737465
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9965616045845272
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9753898635477583
+        }
+      }
+    },
+    "val_fpr01": {
+      "threshold": 0.5018668174743652,
+      "accuracy": 0.9758053270115744,
+      "precision": 0.9792477302204928,
+      "recall": 0.9860357645167772,
+      "f1": 0.9826300245282074,
+      "fpr": 0.04740200546946217,
+      "mcc": 0.9428396338014516,
+      "tp": 9815,
+      "tn": 4180,
+      "fp": 208,
+      "fn": 139,
+      "per_group": {
+        "dos": {
+          "n": 1,
+          "detection_rate": 1.0
+        },
+        "normal": {
+          "n": 4388,
+          "false_positive_rate": 0.04740200546946217
+        },
+        "scanning": {
+          "n": 1745,
+          "detection_rate": 0.9977077363896848
+        },
+        "xss": {
+          "n": 8208,
+          "detection_rate": 0.9835526315789473
+        }
+      }
+    }
+  },
+  "model": "mlp",
+  "seed": 42,
+  "dataset": "toniot_host2",
+  "overrides": {
+    "lr": 0.0005,
+    "dropout": 0.3
+  },
+  "info": {
+    "best_epoch": 46,
+    "best_val_loss": 0.016995606038057564,
+    "epochs_run": 56,
+    "train_seconds": 118.15610551834106,
+    "n_params": 143866,
+    "train_cfg": {
+      "optimizer": "adam",
+      "lr": 0.0005,
+      "weight_decay": 0.0,
+      "batch_size": 256,
+      "max_epochs": 60,
+      "patience": 10
+    }
+  }
+}

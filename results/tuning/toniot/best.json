@@ -1,0 +1,28 @@
+{
+  "proposed": {
+    "lr": 0.001
+  },
+  "thesis_ftt": {
+    "lr": 0.001
+  },
+  "single_token": {
+    "lr": 0.0002
+  },
+  "mlp": {
+    "lr": 0.0005,
+    "dropout": 0.3
+  },
+  "cnn1d": {
+    "lr": 0.001
+  },
+  "ft_transformer": {
+    "lr": 0.0001
+  },
+  "rf": {
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "xgboost": {
+    "max_depth": 10
+  }
+}

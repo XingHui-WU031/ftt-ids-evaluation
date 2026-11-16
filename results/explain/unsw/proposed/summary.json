@@ -1,0 +1,102 @@
+{
+  "model": "proposed",
+  "features": [
+    "dur",
+    "spkts",
+    "dpkts",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sttl",
+    "dttl",
+    "sload",
+    "dload",
+    "sloss",
+    "dloss",
+    "sinpkt",
+    "dinpkt",
+    "sjit",
+    "djit",
+    "swin",
+    "stcpb",
+    "dtcpb",
+    "dwin",
+    "tcprtt",
+    "synack",
+    "ackdat",
+    "smean",
+    "dmean",
+    "trans_depth",
+    "response_body_len",
+    "ct_srv_src",
+    "ct_state_ttl",
+    "ct_dst_ltm",
+    "ct_src_dport_ltm",
+    "ct_dst_sport_ltm",
+    "ct_dst_src_ltm",
+    "is_ftp_login",
+    "ct_ftp_cmd",
+    "ct_flw_http_mthd",
+    "ct_src_ltm",
+    "ct_srv_dst",
+    "is_sm_ips_ports",
+    "proto",
+    "service",
+    "state"
+  ],
+  "seeds": {
+    "42": {
+      "base_value": -1.6877669095993042,
+      "additivity_mae": 0.9915853076944894,
+      "additivity_rel": 0.13157213613352448
+    },
+    "43": {
+      "base_value": -1.9896737337112427,
+      "additivity_mae": 1.1060290149015772,
+      "additivity_rel": 0.15400933032908923
+    },
+    "44": {
+      "base_value": -1.7854993343353271,
+      "additivity_mae": 1.2038842465934654,
+      "additivity_rel": 0.17220352674714193
+    },
+    "45": {
+      "base_value": -1.523019552230835,
+      "additivity_mae": 1.2046152903046108,
+      "additivity_rel": 0.16076848839117655
+    },
+    "46": {
+      "base_value": -1.7943289279937744,
+      "additivity_mae": 1.02527297443503,
+      "additivity_rel": 0.15291243420752748
+    }
+  },
+  "stability": {
+    "across_backgrounds": {
+      "spearman_mean": 0.9979,
+      "spearman_std": 0.0,
+      "kendall_mean": 0.9768,
+      "kendall_std": 0.0,
+      "top10_jaccard_mean": 0.9091,
+      "top10_jaccard_std": 0.1286
+    },
+    "across_seeds": {
+      "spearman_mean": 0.7642,
+      "spearman_std": 0.0618,
+      "kendall_mean": 0.5972,
+      "kendall_std": 0.0576,
+      "top10_jaccard_mean": 0.5678,
+      "top10_jaccard_std": 0.0951
+    }
+  },
+  "shap_vs_permutation": {
+    "spearman": 0.7599870350862976,
+    "top10_overlap": 7
+  },
+  "outcome_counts_seed_first": {
+    "TP": 45068,
+    "TN": 24731,
+    "FP": 12269,
+    "FN": 264
+  }
+}

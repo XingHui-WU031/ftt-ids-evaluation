@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pt
+*.pkl
+.venv/
+wheels/
+logs/
+results_smoke/
+_old_*
+*.tar.gz
+analysis/out/unsw_meta.npz
