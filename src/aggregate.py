@@ -9,6 +9,7 @@ from scipy.stats import chi2
 
 from .data import load_dataset  # noqa: F401  (kept for callers)
 from .utils import load_json
+from .thresholds import THRESHOLD_VERSION
 
 ORDER = ["rf", "xgboost", "lightgbm", "mlp", "cnn1d", "ft_transformer", "single_token", "thesis_ftt",
          "abl_shared_noid", "abl_perfeat_ordinal", "abl_shared_catemb", "proposed"]
@@ -23,6 +24,8 @@ def _collect(results_dir, dataset):
     rows = []
     for p in glob.glob(os.path.join(results_dir, "runs", dataset, "*", "seed*", "metrics.json")):
         m = load_json(p)
+        if m.get("threshold_version") != THRESHOLD_VERSION:
+            raise ValueError("Historical metrics use the old threshold rule. Run analysis/07_revision_reanalysis.py; do not relabel archived metrics as corrected.")
         base = dict(model=m["model"], seed=m["seed"], dir=os.path.dirname(p),
                     roc_auc=m["test_ranking"]["roc_auc"], avg_precision=m["test_ranking"]["avg_precision"],
                     val_acc=m["val"]["accuracy"], val_auc=m["val"]["roc_auc"],

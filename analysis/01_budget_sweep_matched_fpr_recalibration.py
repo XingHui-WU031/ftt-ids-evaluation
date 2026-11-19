@@ -1,5 +1,8 @@
 import os as _os
 _H = _os.path.dirname(_os.path.abspath(__file__)); _ROOT = _os.path.dirname(_H); _OUT = _os.path.join(_H, "out"); _os.makedirs(_OUT, exist_ok=True)
+import sys as _sys
+_sys.path.insert(0, _ROOT)
+from src.thresholds import benign_budget_threshold, labelled_budget_threshold
 import numpy as np, json, sys
 from sklearn.metrics import roc_curve, roc_auc_score
 R=_ROOT+"/results/runs/"
@@ -10,8 +13,7 @@ SEEDS=range(42,47)
 def load(ds,mod,s):
     d=np.load(f"{R}{ds}/{mod}/seed{s}/preds.npz"); return d["p_val"],d["p_test"]
 def thr_fpr(pv,yv,a):
-    neg=np.sort(pv[yv==0]); k=int(np.floor(a*len(neg)))
-    return float(np.nextafter(neg[len(neg)-k-1],1.0)) if k<len(neg) else 0.0
+    return labelled_budget_threshold(yv, pv, a)
 def met(y,p,t):
     pr=p>=t; tp=(pr&(y==1)).sum(); fp=(pr&(y==0)).sum(); fn=((~pr)&(y==1)).sum(); tn=((~pr)&(y==0)).sum()
     prec=tp/max(tp+fp,1); rec=tp/(tp+fn); f1=2*prec*rec/max(prec+rec,1e-12)
@@ -83,7 +85,7 @@ for mod in MODELS[:6]:
                 pv,pt=load("unsw",mod,s); negidx=np.where(yt==0)[0]
                 for rep in range(20):
                     cal_i=rng.choice(negidx,n,replace=False); mask=np.ones(len(yt),bool); mask[cal_i]=False
-                    neg=np.sort(pt[cal_i]); k=int(np.floor(a*n)); t=float(np.nextafter(neg[n-k-1],1.0))
+                    t=benign_budget_threshold(pt[cal_i], a)
                     x=met(yt[mask],pt[mask],t); r.append([x["fpr"],x["rec"],x["f1"],x["acc"]])
             r=np.array(r); res[f"{n}_{a}"]=[(100*r.mean(0)).tolist(),(100*r.std(0)).tolist()]
     rec[mod]=res

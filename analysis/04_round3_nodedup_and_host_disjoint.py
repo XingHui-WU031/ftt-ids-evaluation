@@ -1,10 +1,13 @@
 import os as _os
 _H = _os.path.dirname(_os.path.abspath(__file__)); _ROOT = _os.path.dirname(_H); _OUT = _os.path.join(_H, "out"); _os.makedirs(_OUT, exist_ok=True)
+import sys as _sys
+_sys.path.insert(0, _ROOT)
+from src.thresholds import benign_budget_threshold, labelled_budget_threshold
 import numpy as np, json, glob, os
 from sklearn.metrics import roc_auc_score, roc_curve
 R3=_ROOT+"/results_r3/runs/"; R1=_ROOT+"/results/runs/"
 def thr(pv,yv,a=0.01):
-    neg=np.sort(pv[yv==0]); k=int(np.floor(a*len(neg))); return float(np.nextafter(neg[len(neg)-k-1],1.0))
+    return labelled_budget_threshold(yv, pv, a)
 def met(y,p,t):
     pr=p>=t; tp=(pr&(y==1)).sum(); fp=(pr&(y==0)).sum(); fn=((~pr)&(y==1)).sum(); tn=((~pr)&(y==0)).sum()
     return dict(f1=2*tp/max(2*tp+fp+fn,1),fpr=fp/max(fp+tn,1),rec=tp/max(tp+fn,1),acc=(tp+tn)/len(y))
@@ -35,7 +38,7 @@ for k in range(5):
             a=met(yv,pv,.5); b=met(yt,pt,.5); c=met(yt,pt,t); neg=np.where(yt==0)[0]; rc=[]
             for rep in range(20):
                 n=1000; ci=rng.choice(neg,n,replace=False); mk=np.ones(len(yt),bool); mk[ci]=False
-                q=np.sort(pt[ci]); t2=float(np.nextafter(q[n-int(np.floor(0.01*n))-1],1.0)); x=met(yt[mk],pt[mk],t2); rc.append([x["fpr"],x["rec"],x["f1"]])
+                t2=benign_budget_threshold(pt[ci], 0.01); x=met(yt[mk],pt[mk],t2); rc.append([x["fpr"],x["rec"],x["f1"]])
             rc=np.mean(rc,0)
             rows.append([a["fpr"],roc_auc_score(yt,pt),b["f1"],b["fpr"],b["rec"],c["f1"],c["fpr"],c["rec"],rc[0],rc[1],rc[2],ece(yv,pv),ece(yt,pt),a["f1"]])
         mu=np.mean(rows,0); allr[(k,mod)]=mu

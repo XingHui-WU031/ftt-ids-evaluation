@@ -136,6 +136,11 @@ def cmd_train(args, log):
                 log(f"  {name}: skipped ({e})")
 
 
+def cmd_host_strict(args, log):
+    from src.host_protocol import run_strict
+    run_strict(args, log)
+
+
 def cmd_aggregate(args, log):
     from src.aggregate import aggregate
     aggregate(args.results, args.dataset, log, reference=args.model)
@@ -173,7 +178,9 @@ def cmd_profile(args, log):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["check", "smoke", "tune", "train", "aggregate", "explain", "profile", "sensitivity",
-                                    "explain_r3", "search"])
+                                    "explain_r3", "search", "host_strict"])
+    ap.add_argument("--host-folds", nargs="+", type=int, default=list(range(5)))
+    ap.add_argument("--dedup-policy", choices=["within_host", "none"], default="within_host")
     ap.add_argument("--dataset", default="unsw")
     ap.add_argument("--data-dir", default=None)
     ap.add_argument("--group", default="main", choices=list(GROUPS))

@@ -1,4 +1,5 @@
 import numpy as np
+from .thresholds import labelled_budget_threshold
 from sklearn.metrics import (roc_auc_score, average_precision_score, precision_recall_curve,
                              roc_curve, matthews_corrcoef)
 
@@ -32,9 +33,7 @@ def select_threshold(y_val, p_val, method="f1"):
     if method.startswith("fpr"):
         # smallest threshold whose validation false-positive rate is <= target (e.g. fpr01 -> 1%)
         target = float(method[3:]) / 100
-        neg = np.sort(p_val[y_val == 0])
-        k = int(np.floor(target * len(neg)))
-        return float(np.nextafter(neg[len(neg) - k - 1], 1.0)) if k < len(neg) else 0.0
+        return labelled_budget_threshold(y_val, p_val, target)
     raise ValueError(method)
 
 

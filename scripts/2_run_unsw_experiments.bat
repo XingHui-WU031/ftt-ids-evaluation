@@ -1,8 +1,8 @@
 @echo off
 REM Step 2: smoke test, then the full Plan-A pipeline on UNSW-NB15. Safe to re-run: finished runs are skipped.
-cd /d "%~dp0"
+cd /d "%~dp0.."
 if not exist logs mkdir logs
-set PY=..\Python_all\.venv\Scripts\python.exe
+set PY=python
 set LOG=logs\step2.log
 echo ===== start %date% %time% ===== >> %LOG%
 %PY% run.py smoke >> %LOG% 2>&1

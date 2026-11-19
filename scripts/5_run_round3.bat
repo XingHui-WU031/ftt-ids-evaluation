@@ -5,9 +5,9 @@ REM   B  host-disjoint evaluation on TON_IoT (5 folds x 3 seeds)
 REM   C  second attribution method (Integrated Gradients) + expected gradients with 2000 samples
 REM   D  retraining-based faithfulness (ROAR): remove SHAP top-k vs random-k features and retrain
 REM   E  larger hyperparameter search for XGBoost and FTT-IDS
-cd /d "%~dp0"
+cd /d "%~dp0.."
 if not exist logs mkdir logs
-set PY=..\Python_all\.venv\Scripts\python.exe
+set PY=python
 set R=results_r3
 set LOG=logs\step5.log
 echo ===== start %date% %time% ===== >> %LOG%

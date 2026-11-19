@@ -5,6 +5,7 @@ import numpy as np
 
 from .configs import MODELS, ABLATION_LR_FROM
 from .metrics import full_report
+from .thresholds import THRESHOLD_VERSION
 from .trainers import fit_torch, fit_tree, predict_torch, predict_tree, _arrays
 from .utils import save_json, load_json
 
@@ -61,7 +62,8 @@ def run_one(name, bundle, seed, device, results_dir, overrides=None, tag=None, l
             extra["host_test"] = bundle.host_test.astype(str)
         np.savez_compressed(meta_path, y_val=y_val, y_test=y_test, **extra)
     rep = full_report(y_val, p_val, y_test, p_test, bundle.splits["test"]["group"])
-    rep.update(model=name, seed=seed, dataset=tag or bundle.name, overrides=overrides or {}, info=info)
+    rep.update(model=name, seed=seed, dataset=tag or bundle.name, overrides=overrides or {}, info=info,
+               threshold_version=THRESHOLD_VERSION, data_protocol=bundle.info)
     save_json(rep, os.path.join(out, "metrics.json"))
     t = rep["test"]
     log(f"  -> {name} s{seed}: AUC {rep['test_ranking']['roc_auc']:.4f} | F1@0.5 {t['default']['f1']:.4f} "

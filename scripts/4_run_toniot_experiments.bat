@@ -1,7 +1,7 @@
 @echo off
 REM Step 4: TON_IoT (second dataset). Run AFTER step 3 has finished. Safe to re-run.
-cd /d "%~dp0"
-set PY=..\Python_all\.venv\Scripts\python.exe
+cd /d "%~dp0.."
+set PY=python
 set LOG=logs\step4.log
 echo ===== start %date% %time% ===== >> %LOG%
 %PY% run.py tune      --dataset toniot >> %LOG% 2>&1

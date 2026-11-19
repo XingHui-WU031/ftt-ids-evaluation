@@ -1,0 +1,11 @@
+policy,fold,calibration_host,n_cal_host_benign,n_eval_benign,n_eval_attack,valid
+within_host,1,192.168.1.184,1634,4320,32887,True
+within_host,2,192.168.1.180,2460,2481,24374,True
+within_host,3,192.168.1.195,3199,701,9991,True
+within_host,4,192.168.1.152,3270,0,2177,False
+within_host,5,172.17.0.5,1227,5183,2017,True
+none,1,192.168.1.184,1643,5364,61586,True
+none,2,192.168.1.180,3708,3264,30359,True
+none,3,192.168.1.195,4206,2779,27227,True
+none,4,192.168.1.152,21891,0,18814,False
+none,5,172.17.0.5,1562,5583,23053,True

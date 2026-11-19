@@ -1,5 +1,8 @@
 import os as _os
 _H = _os.path.dirname(_os.path.abspath(__file__)); _ROOT = _os.path.dirname(_H); _OUT = _os.path.join(_H, "out"); _os.makedirs(_OUT, exist_ok=True)
+import sys as _sys
+_sys.path.insert(0, _ROOT)
+from src.thresholds import benign_budget_threshold, labelled_budget_threshold
 import numpy as np
 R=_ROOT+"/results/runs/"
 m=np.load(_OUT+"/unsw_meta.npz",allow_pickle=True)
@@ -8,7 +11,7 @@ SEEDS=range(42,47)
 def load(ds,mod,s):
     d=np.load(f"{R}{ds}/{mod}/seed{s}/preds.npz"); return d["p_val"],d["p_test"]
 def thr(pv,a=0.01):
-    neg=np.sort(pv[yv==0]); k=int(np.floor(a*len(neg))); return float(np.nextafter(neg[len(neg)-k-1],1.0))
+    return labelled_budget_threshold(yv, pv, a)
 def f1(y,pr):
     tp=(pr&(y==1)).sum(); fp=(pr&(y==0)).sum(); fn=((~pr)&(y==1)).sum(); return 2*tp/(2*tp+fp+fn)
 P={mod:np.array([load("unsw",mod,s)[1]>=thr(load("unsw",mod,s)[0]) for s in SEEDS]) for mod in ["rf","xgboost","mlp","cnn1d","ft_transformer","proposed","thesis_ftt","single_token"]}
